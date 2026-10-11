@@ -1,10 +1,294 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aikido Security Demo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #f7f9fc;
+    }
+
+    nav {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .status {
+      color: #73f3be;
+      font-size: 14px;
+    }
+
+    .hero {
+      max-width: 1180px;
+      margin: 70px auto 40px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 20px;
+      background: rgba(115, 243, 190, 0.12);
+      color: #73f3be;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin: 0 0 24px;
+    }
+
+    h1 span {
+      color: #73f3be;
+    }
+
+    .intro {
+      color: #aab7c7;
+      font-size: 19px;
+      line-height: 1.6;
+      max-width: 650px;
+    }
+
+    .scan-card {
+      background: linear-gradient(145deg, #101e30, #0b1726);
+      border: 1px solid #20344b;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 30px 60px rgba(0,0,0,.3);
+    }
+
+    .scan-card h3 {
+      margin-top: 0;
+      font-size: 16px;
+      color: #aab7c7;
+    }
+
+    .score {
+      font-size: 60px;
+      font-weight: 700;
+      color: #73f3be;
+      margin: 15px 0 5px;
+    }
+
+    .secure {
+      color: #73f3be;
+      font-weight: 600;
+    }
+
+    .divider {
+      height: 1px;
+      background: #20344b;
+      margin: 24px 0;
+    }
+
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      margin: 14px 0;
+      color: #aab7c7;
+    }
+
+    .detail strong {
+      color: #fff;
+    }
+
+    .features {
+      max-width: 1180px;
+      margin: 90px auto;
+      padding: 0 24px;
+    }
+
+    .features h2 {
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature {
+      background: #0d1928;
+      border: 1px solid #1d3045;
+      border-radius: 16px;
+      padding: 26px;
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(115, 243, 190, 0.12);
+      color: #73f3be;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    .feature h3 {
+      margin: 22px 0 10px;
+    }
+
+    .feature p {
+      color: #91a1b4;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    footer {
+      max-width: 1180px;
+      margin: auto;
+      padding: 30px 24px 50px;
+      border-top: 1px solid #1d3045;
+      color: #738397;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        margin-top: 35px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Aikido Security Demo</h1>
-  <p>This is my public application for testing Aikido domain scanning.</p>
+
+  <nav>
+    <div class="logo">Security Lab</div>
+    <div class="status">● Environment online</div>
+  </nav>
+
+  <main>
+
+    <section class="hero">
+
+      <div>
+        <div class="badge">SECURITY TEST ENVIRONMENT</div>
+
+        <h1>
+          Build fast.<br>
+          Stay <span>secure.</span>
+        </h1>
+
+        <p class="intro">
+          A public demo application for exploring modern application security.
+          This environment is used to demonstrate how exposed web applications
+          can be monitored and assessed with Aikido Security.
+        </p>
+      </div>
+
+      <div class="scan-card">
+        <h3>SECURITY OVERVIEW</h3>
+
+        <div class="score">98</div>
+        <div class="secure">Security monitoring active</div>
+
+        <div class="divider"></div>
+
+        <div class="detail">
+          <span>Environment</span>
+          <strong>Demo</strong>
+        </div>
+
+        <div class="detail">
+          <span>HTTPS</span>
+          <strong>Enabled</strong>
+        </div>
+
+        <div class="detail">
+          <span>Visibility</span>
+          <strong>Public</strong>
+        </div>
+
+        <div class="detail">
+          <span>Monitoring</span>
+          <strong>Active</strong>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="features">
+
+      <h2>Security testing environment</h2>
+
+      <div class="grid">
+
+        <div class="feature">
+          <div class="icon">⌁</div>
+          <h3>Domain Security</h3>
+          <p>
+            Explore the externally visible security configuration of this
+            public web application.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="icon">◎</div>
+          <h3>Container Security</h3>
+          <p>
+            Container images are automatically built and published through
+            the application's CI/CD workflow.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="icon">✓</div>
+          <h3>Continuous Testing</h3>
+          <p>
+            Security checks help identify potential risks as the application
+            and its dependencies change.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    Aikido Security Demo Environment • Built for security testing
+  </footer>
+
 </body>
 </html>

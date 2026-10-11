@@ -31,4 +31,3 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/manonverhaeghe123-art/aikido-container-demo:latest
-`

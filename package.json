@@ -1,0 +1,9 @@
+{
+  "name": "trailblaze-webshop",
+  "version": "1.0.0",
+  "description": "TrailBlaze outdoor webshop demo",
+  "private": true,
+  "dependencies": {
+    "lodash": "4.17.21"
+  }
+}
